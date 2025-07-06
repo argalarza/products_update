@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  update-product-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: update-product-service
+    ports:
+      - "4008:4008"
+    env_file:
+      - .env
+    restart: always
